@@ -12,8 +12,13 @@
 }
 
 #mywordzies ul li {
-	list-style-type: none;
 	font-family: 'Lilita One', cursive;
+	background: #fff;
+	border: 6px solid #ccc;
+	height: 100px;
+	margin: 20px;
+	padding: 20px;
+	width: 400px;
 }
 
 #addwordzy-btn{
