@@ -10,7 +10,7 @@
 Random words to add to your wordzies:
 	<ul>
 		<% @suggested_words.each do |word| %>
-			<li><%= word['word'] %></li>
+			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
 		<% end %>
 	</ul>
 
