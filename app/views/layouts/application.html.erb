@@ -7,10 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
-  
-
+  <div class="container">
+    <header>
+      <nav class="nav"> <%= image_tag("nav.png") %>
+         
+       </nav>
+     </header>
+   
 <%= yield %>
-
+  </div>
 </body>
 </html>
