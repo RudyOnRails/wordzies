@@ -8,12 +8,16 @@
 </head>
 <body>
   <div class="container">
-    <header>
-      <nav class="nav"> <%= image_tag("nav.png") %>
-         
-       </nav>
+    <header id="header">
+      <h1>Wordzies</h1>
+      <div id="searchbox">
+        
+      	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
+      	  <%= text_field_tag(:q,"find a wordzy") %>
+      	  <%= submit_tag("Search", :class => "btn-warning btn-large", :id => "search-btn") %>
+      	<% end %>
+      </div>
      </header>
-   
 <%= yield %>
   </div>
 </body>

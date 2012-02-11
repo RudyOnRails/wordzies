@@ -12,10 +12,16 @@ class WordsController < ApplicationController
   
   def show
     @the_word = params[:word]
+    @wn_word_id = Wordnik.word.get_word(@the_word)['id']
     @wn_definitions = Wordnik.word.get_definitions(@the_word, :limit => 5)
     @wn_example = Wordnik.word.get_top_example(@the_word)
     @wn_synonyms = Wordnik.word.get_related(@the_word, :type => 'synonym')
     @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
   end
+  
+  # def create
+  #   @the_word = Word.new(params[:word])
+  #   redirect_to root_url
+  # end
   
 end

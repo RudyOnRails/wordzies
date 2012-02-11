@@ -1,8 +1,9 @@
-<h1>Wordzies!</h1>
+<h1>Wordzies Word Banks</h1>
 
-<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
-
+<div id="mywordzies">
+<ul>
+	<% @words.each do |wordzie| %>
+	<li><%= wordzie %></li>
+	<% end %>
+</ul>
+</div>
