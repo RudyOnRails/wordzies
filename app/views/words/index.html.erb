@@ -1,7 +1,9 @@
-<h1>Words</h1>
+<h1>Wordzies!</h1>
+
+<%= @definitions.first["word"]%>
 
 <ul>
-	<% @words.each do |word| %>
-		<li><%= word %></li>
-	<% end %>
+<% @definitions.each do |definition| %>
+<li><%= definition["text"] %></li>
+<% end %>
 </ul>
