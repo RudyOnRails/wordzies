@@ -2,7 +2,7 @@
 
 <p>
 	<%= form_for(@word) do |f| %>
-		<%= f.hidden_field(:wn_title, value: @the_word.to_s) %>
+		<%= f.hidden_field(:wn_title, value: @the_word) %>
 		<%= f.hidden_field(:wn_id, value: @wn_word_id) %>
 		<%= f.submit("Add Word to My Wordzie Bank") %>
 	<% end %>
