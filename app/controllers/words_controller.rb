@@ -17,11 +17,13 @@ class WordsController < ApplicationController
     @wn_example = Wordnik.word.get_top_example(@the_word)
     @wn_synonyms = Wordnik.word.get_related(@the_word, :type => 'synonym')
     @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
+    @word = Word.new
   end
   
-  # def create
-  #   @the_word = Word.new(params[:word])
-  #   redirect_to root_url
-  # end
+  def create
+    @word = Word.new(params[:word])
+    @word.save
+    redirect_to root_url
+  end
   
 end

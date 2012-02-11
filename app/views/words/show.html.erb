@@ -1,11 +1,11 @@
 <h1><%= @the_word %></h1>
 
 <p>
-	<%#= form_for(@the_word) do |f| %>
-		<%#= f.hidden_field_tag(:wn_title, @the_word) %>
-		<%#= f.hidden_field_tag(:wn_id, @wn_word_id %>
-		<%#= f.submit "Add Word to My Wordzie Bank" %>
-	<%# end %>
+	<%= form_for(@word) do |f| %>
+		<%= f.hidden_field(:wn_title, value: @the_word) %>
+		<%= f.hidden_field(:wn_id, value: @wn_word_id) %>
+		<%= f.submit("Add Word to My Wordzie Bank") %>
+	<% end %>
 </p>
 
 <p>
