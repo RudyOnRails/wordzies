@@ -12,7 +12,10 @@ class WordsController < ApplicationController
   
   def show
     @the_word = params[:word]
-    @definitions = Wordnik.word.get_definitions(@the_word)
+    @wn_definitions = Wordnik.word.get_definitions(@the_word, :limit => 5)
+    @wn_example = Wordnik.word.get_top_example(@the_word)
+    @wn_synonyms = Wordnik.word.get_related(@the_word, :type => 'synonym')
+    @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
   end
   
 end
