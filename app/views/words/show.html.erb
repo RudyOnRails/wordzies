@@ -1,0 +1,8 @@
+<%= @the_word %>
+
+
+<ul>
+	<% @definitions.each do |definition| %>
+		<li><%= definition["text"] %></li>
+	<% end %>
+</ul>
