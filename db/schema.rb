@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211200720) do
+ActiveRecord::Schema.define(:version => 20120211215127) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -31,10 +31,10 @@ ActiveRecord::Schema.define(:version => 20120211200720) do
   end
 
   create_table "words", :force => true do |t|
-    t.string   "wn_title"
-    t.integer  "wn_id",      :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "wn_title"
+    t.integer  "wn_id"
   end
 
 end
