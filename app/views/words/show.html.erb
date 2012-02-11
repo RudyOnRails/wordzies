@@ -1,6 +1,14 @@
 <h1><%= @the_word %></h1>
 
 <p>
+	<%= form_tag(@word) do %>
+		<%= hidden_field_tag(:wn_title, @the_word) %>
+		<%= hidden_field_tag(:wn_id, @wn_word_id) %>
+		<%= submit_tag("Add Word to My Wordzie Bank") %>
+	<% end %>
+</p>
+
+<p>
 	<% if @wn_pronunciation.present? %>
 		Pronunciation: <%= link_to 'Hear the word', 
 										@wn_pronunciation.first['fileUrl'], :target => :blank %>

@@ -10,6 +10,12 @@
 	<a href="http://localhost:3000">Home</a> | 
 	<%= link_to "Sign in with Twitter", "/auth/twitter" %>
 
+	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
+	  <%= label_tag(:q, "Search for:") %>
+	  <%= text_field_tag(:q) %>
+	  <%= submit_tag("Search") %>
+	<% end %>
+	
 <%= yield %>
 
 </body>
