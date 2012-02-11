@@ -2,16 +2,8 @@
 
 one:
   wn_title: MyString
-  wn_part_of_speech: 
-  wn_definition: 
-  wn_example: 
-  wn_synonyms: 
-  wn_pronounciation: MyString
+  wn_pronunciation: MyString
 
 two:
   wn_title: MyString
-  wn_part_of_speech: 
-  wn_definition: 
-  wn_example: 
-  wn_synonyms: 
-  wn_pronounciation: MyString
+  wn_pronunciation: MyString
