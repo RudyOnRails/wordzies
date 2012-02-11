@@ -5,4 +5,7 @@ WordziesCA::Application.routes.draw do
   get "words/index"
   get "pages/home"
   # resources :words, :only => [:index]
+  
+  get "/search" => 'words#search'
+  
 end
