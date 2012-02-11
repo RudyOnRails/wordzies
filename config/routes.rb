@@ -1,6 +1,7 @@
 WordziesCA::Application.routes.draw do
-  get "pages/home"
 
-  resources :words
+  # resources :words
+  get "words/index"
+  get "pages/home"
 
 end
