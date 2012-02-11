@@ -13,7 +13,7 @@
 
   <div class="container">
     <header id="header">
-      <h1>Wordzies</h1>
+      <h1><%=  link_to 'Wordzies', root_url %></h1>
       <div id="searchbox">
       	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
       	  <%= text_field_tag(:q,"find a wordzy") %>
