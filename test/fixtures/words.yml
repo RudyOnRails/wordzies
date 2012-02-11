@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wn_title: MyString
+  wn_part_of_speech: 
+  wn_definition: 
+  wn_example: 
+  wn_synonyms: 
+  wn_pronounciation: MyString
+
+two:
+  wn_title: MyString
+  wn_part_of_speech: 
+  wn_definition: 
+  wn_example: 
+  wn_synonyms: 
+  wn_pronounciation: MyString
