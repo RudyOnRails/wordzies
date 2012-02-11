@@ -7,14 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
-	  <%= label_tag(:q, "Search for:") %>
-	  <%= text_field_tag(:q) %>
-	  <%= submit_tag("Search") %>
-	<% end %>
-	
+  <div class="container">
+    <header id="header">
+      <h1>Wordzies</h1>
+      <div id="searchbox">
+        
+      	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
+      	  <%= text_field_tag(:q,"find a wordzy") %>
+      	  <%= submit_tag("Search", :class => "btn-warning btn-large", :id => "addwordzy-btn") %>
+      	<% end %>
+      </div>
+     </header>
 <%= yield %>
-
+  </div>
 </body>
 </html>
