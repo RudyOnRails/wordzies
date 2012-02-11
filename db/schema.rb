@@ -11,11 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120211040954) do
+ActiveRecord::Schema.define(:version => 20120211191858) do
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "twitter_handle"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "words", :force => true do |t|
     t.string   "wn_title"
-    t.string   "wn_pronunciation"
+    t.integer  "wn_id",      :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end

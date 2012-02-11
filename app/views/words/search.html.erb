@@ -1,6 +1,8 @@
 <h1>Is this your word?</h1>
 
-
-<p>
-	<%= Wordnik.words.search_words(:query => @q, :caseSensitive => 'true', :skip => 0, :limit => 10) %>
-</p>
+<p>Your results returned: <%= @the_searched_word['totalResults'] %></p>
+<ul>
+	<% @the_searched_word['searchResults'].each do |result| %>
+		<li><%= link_to result['word'], "words/#{result['word']}" %></li>
+	<% end %>
+</ul>

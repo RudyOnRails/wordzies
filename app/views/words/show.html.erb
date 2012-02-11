@@ -1,0 +1,34 @@
+<h1><%= @the_word %></h1>
+
+<p>Pronunciation: <%= link_to 'Hear the word', @wn_pronunciation.first['fileUrl'], :target => :blank %></p>
+
+<p>
+	Definitions:
+	<ul>
+		<% @wn_definitions.each do |definition| %>
+			<li>
+				(<%= definition["partOfSpeech"] %>)	<%= definition["text"] %>
+			</li>
+		<% end %>
+	</ul>
+</p>
+
+<p>
+	Example:<br />
+	<ul>
+		<li>"<%= @wn_example['text'] %>"</li>
+	</ul>
+</p>
+
+<p>
+	Synonyms:
+	<ul>
+		<% @wn_synonyms.each do |synonym_list| %>
+			<% synonym_list['words'].each do |synonym| %>
+				<li>
+					<%= synonym %>
+				</li>
+			<% end %>
+		<% end %>
+	</ul>
+</p>
