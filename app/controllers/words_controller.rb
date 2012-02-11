@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   
   def index
     @words = Word.all
-    
+    @suggested_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc', :limit => 5)
   end
   
   def search
