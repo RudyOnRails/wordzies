@@ -17,7 +17,9 @@ class WordsController < ApplicationController
     @wn_example = Wordnik.word.get_top_example(@the_word)
     @wn_synonyms = Wordnik.word.get_related(@the_word, :type => 'synonym')
     @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
+    @is_word_in_database = 
     @word = Word.new
+    @use = Use.new
   end
   
   def create

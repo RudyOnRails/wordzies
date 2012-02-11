@@ -55,3 +55,8 @@
 	<% else %>
 	<% end %>
 </p>
+
+<% if Word.find_by_wn_id(@wn_word_id) != nil %>
+	<%= render 'user_usage' if @wn_word_id == Word.find_by_wn_id(@wn_word_id)['wn_id'] %>
+<% else %>
+<% end %>

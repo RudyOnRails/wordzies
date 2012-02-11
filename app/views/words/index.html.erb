@@ -1,17 +1,19 @@
 <h1>Wordzies Word Banks</h1>
 
 <div id="mywordzies">
-	<ul>
-		<% @words.each do |wordzie| %>
-		<li><%= wordzie.wn_title %></li>
-		<% end %>
-	</ul>
+
+<ul>
+	<% @words.each do |wordzie| %>
+	<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
+	<% end %>
+</ul>
 Random words to add to your wordzies:
 	<ul>
 		<% @suggested_words.each do |word| %>
 			<li><%= word['word'] %></li>
 		<% end %>
 	</ul>
+
 </div>
 
 
