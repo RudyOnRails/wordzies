@@ -1,3 +1,21 @@
 // Place all the styles related to the words controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Lilita+One);
+
+#mywordzies {
+	background: #d6d8da;
+	width: 498px;
+	border: 2px solid #88d56b;
+	height: 538px;	
+}
+
+#mywordzies ul li {
+	list-style-type: none;
+	font-family: 'Lilita One', cursive;
+}
+
+#addwordzy-btn{
+	
+}

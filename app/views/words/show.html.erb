@@ -4,7 +4,7 @@
 	<%= form_for(@word) do |f| %>
 		<%= f.hidden_field(:wn_title, value: @the_word) %>
 		<%= f.hidden_field(:wn_id, value: @wn_word_id) %>
-		<%= f.submit("Add Word to My Wordzie Bank") %>
+		<%= f.submit("Add Word to My Wordzie Bank", :class => "btn-success btn-large", :id => "search-btn") %>
 	<% end %>
 </p>
 
