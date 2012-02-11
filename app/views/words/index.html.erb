@@ -3,7 +3,7 @@
 <div id="mywordzies">
 <ol>
 	<% @words.each do |wordzie| %>
-	<li><%= wordzie.wn_title %></li>
+	<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
 	<% end %>
 </ol>
 </div>
