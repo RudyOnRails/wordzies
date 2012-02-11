@@ -7,7 +7,7 @@ WordziesCA::Application.routes.draw do
 
   get '/search' => 'words#search'
   get 'words/:word' => 'words#show'
-  post '/words/:word' => 'words#create'
+  post '/words' => 'words#create'
   
   resources :users
   
