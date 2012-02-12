@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   def index
     if current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
-      @words = @current_user.words.all
+      @words = @current_user.words.last(5)
     else
     end
     @suggested_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc', :limit => 5)
