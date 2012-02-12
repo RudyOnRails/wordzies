@@ -12,14 +12,16 @@
 	<%= link_to "Sign in with Twitter", "/auth/twitter" %>
 
   <div class="container">
-    <header id="header">
-      <h1><%=  link_to 'Wordzies', root_url %></h1>
-      <div id="searchbox">
-      	<%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
-      	  <%= text_field_tag(:q,"find a wordzy") %>
-      	  <%= submit_tag("Search", :class => "btn-warning btn-large", :id => "addwordzy-btn") %>
-      	<% end %>
-      </div>
+    <div class="row span12">
+        <header id="header">
+          <h1><%=  link_to 'Wordzies', root_url %></h1>
+            <div id="searchbox">
+          	  <%= form_tag({:controller => 'words', :action => 'search'}, :method => "get") do %>
+          	  <%= text_field_tag(:q,"find a wordzy") %>
+          	  <%= submit_tag("Search", :class => "btn-warning btn-large", :id => "addwordzy-btn") %>
+          	<% end %>
+          </div>
+        </div>
      </header>
 
 <%= yield %>
