@@ -1,0 +1,35 @@
+<div>
+	<button class="btn btn-danger" data-toggle="collapse" data-target="#sms">Text My Wordzy Sentence To A Friend</button>
+	<div id="sms" class="collapse">
+		<form onSubmit="window.location='index.htm'" action="http://www.text4free.net/send.php" method="post" target="_self" name="submit" id="submit">
+			<input type="hidden" name="type" value="public">
+			<center>
+				<br>
+				Enter mobile number (no dashes) of a friend:<br>
+				<input type="text" name="number" value="123456789"><br>
+				<textarea name="message" rows="5" cols="40">
+					<%= use.example %>
+				</textarea><br>
+				Please choose your recipient's provider:<br>
+				<select name="prov">
+					<option value="">
+						Choose Provider...
+					</option>
+					<option value='8'>
+						AT&amp;T
+					</option>
+					<option value='18'>
+						Sprint PCS
+					</option>
+					<option value='19'>
+						T-Mobile
+					</option>
+					<option value='20'>
+						Verizon
+					</option>
+				</select><br>
+				<input type="submit" value="Text your Wordzy Sentence!" name="submit">
+			</center>
+		</form>
+	</div>
+</div>
