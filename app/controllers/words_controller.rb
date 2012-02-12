@@ -21,13 +21,14 @@ class WordsController < ApplicationController
     @word = Word.new
     
     @use = Use.new
+    @uses = Use.all
   end
   
   def create
     @word = Word.new(params[:word])
     @word.save
 
-    
+
     redirect_to root_url
   end
   

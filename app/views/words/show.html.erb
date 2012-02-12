@@ -47,7 +47,7 @@
 			<% @wn_synonyms.each do |synonym_list| %>
 				<% synonym_list['words'].each do |synonym| %>
 					<li>
-						<%= synonym %>
+						<%= link_to synonym, show_word_url(synonym) %>
 					</li>
 				<% end %>
 			<% end %>

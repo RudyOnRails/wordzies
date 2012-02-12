@@ -15,6 +15,12 @@
 }
 #header {
 	background: #3e4550;
+	background: url('linear-gradient.png') 0 0 repeat-x;
+ 	background: -moz-linear-gradient(top, #3e4550, #646464);
+	background: -ms-linear-gradient(top, #3e4550, #646464);
+	background: -o-linear-gradient(top, #3e4550, #646464);
+	background: -webkit-linear-gradient(top, #3e4550,#646464);
+	background: linear-gradient(top, #3e4550, #646464);
 	height: 170px;
 	position: relative;
 }
