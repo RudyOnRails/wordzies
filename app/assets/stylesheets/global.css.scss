@@ -12,7 +12,6 @@
 	background: -o-linear-gradient(top, #3e4550, #646464);
 	background: -webkit-linear-gradient(top, #3e4550,#646464);
 	background: linear-gradient(top, #3e4550, #646464);
-	height: 120px;
 	.container {
 		position: relative;
 	}
@@ -22,6 +21,9 @@
 	color: #8ec659;
 	padding: 10px;
 	font-size: 50px;
+	text-align: center;
+	line-height: 1.4;
+	margin: 20px 0 0 0;
 }
 
 #header h1 a {
