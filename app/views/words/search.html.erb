@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="row">
   <div class="span6">
     <div id='searchwordzies'>
@@ -10,4 +11,16 @@
           </ul>
     </div>
   </div>
+=======
+<div class="span6">
+	<div id='mywordzies'>
+		<h1>Is this your word?</h1>
+		<h2>Your results returned: <%= @the_searched_word['totalResults'] %></h2>
+		<ul>
+			<% @the_searched_word['searchResults'].each do |result| %>
+				<li><%= link_to result['word'], "words/#{result['word']}" %></li>
+			<% end %>
+		</ul>
+	</div>
+>>>>>>> 8fcbf55a3f4a3ea34e5a3a0cef3265850a74162c
 </div>
