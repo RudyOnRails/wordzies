@@ -1,5 +1,7 @@
 WordziesCA::Application.routes.draw do
 
+  get "uses/create"
+
   root :to => 'words#index'
   # resources :words
   # get "words/index"
@@ -12,5 +14,6 @@ WordziesCA::Application.routes.draw do
   post '/words' => 'words#create'
   
   resources :users
+  resources :uses
   
 end
