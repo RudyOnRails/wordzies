@@ -6,15 +6,14 @@
 
 
 #mywordzies ul li {
-	font-family: 'Lilita One', cursive;
-	background: #d6d8da;
-	line-height: 1.2;
-	width: 400px;
-	font-size: 40px;
-	list-style: none;
-	text-transform: capitalize;
-}
-
+		font-family: 'Lilita One', cursive;
+		background: #d6d8da;
+		margin: 20px 0;
+		font-size: 40px;
+		list-style: none;
+		text-transform: capitalize;
+		line-height: 1.2;
+	}
 
 #mywordzies h1 {
 	font-family: 'Lilita One', cursive;
@@ -33,13 +32,11 @@ ul li:hover {
 #randomwordzies ul li  {
 	font-family: 'Lilita One', cursive;
 	background: #d6d8da;
-	height: 20px;
 	margin: 20px;
-	padding: 20px;
-	width: 400px;
 	font-size: 40px;
 	list-style: none;
 	text-transform: capitalize;
+	line-height: 1.2;
 }
 
 #randomwordzies h1 {
@@ -53,3 +50,32 @@ ul li:hover {
 	margin-left: 20px;
 }
 
+#searchwordzies h1 {
+	font-family: 'Lilita One', cursive;
+	margin: 20px 0;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	margin-left: 20px;
+}
+
+#searchwordzies h2 {
+	font-family: 'Lilita One', cursive;
+	margin: 20px 0;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	margin-left: 20px;
+	text-transform: capitalize;
+}
+
+#wordzieresult h1 {
+	font-family: 'Lilita One', cursive;
+	margin: 20px 0;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	margin-left: 20px;
+}
