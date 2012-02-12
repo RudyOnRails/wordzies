@@ -4,51 +4,6 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require bootstrap
+ *= require global
  *= require_tree . 
 */
-
-@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
-
-.container {
-	margin: 0 auto;
-	width: 960px;
-}
-#header {
-	background: #3e4550;
-	background: url('linear-gradient.png') 0 0 repeat-x;
- 	background: -moz-linear-gradient(top, #3e4550, #646464);
-	background: -ms-linear-gradient(top, #3e4550, #646464);
-	background: -o-linear-gradient(top, #3e4550, #646464);
-	background: -webkit-linear-gradient(top, #3e4550,#646464);
-	background: linear-gradient(top, #3e4550, #646464);
-	height: 170px;
-	position: relative;
-}
-#header h1 {
-	font-family: 'Fugaz One', cursive;
-	color: #8ec659;
-	padding: 10px;
-}
-
-#header h1 a {
-	color: #8ec659;
-}
-#header h1 a:hover {
-	color: #639c4f;
-	text-decoration: none;
-}
-#searchbox {
-	width: 500px;
-	margin: 0 auto;
-	top: 100px;
-}
-
-#q {
-	width: 399px;
-	height: 27px;
-}
-
-#search-btn {
-	margin-left: 10px;
-}
-

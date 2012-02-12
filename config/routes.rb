@@ -15,5 +15,7 @@ WordziesCA::Application.routes.draw do
   resources :uses
   
   match '/auth/twitter/callback', to: 'sessions#create'
-    
+
+  match "/signout" => "sessions#destroy", :as => :signout
+  
 end
