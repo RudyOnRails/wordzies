@@ -13,7 +13,7 @@
 	<p>
 		<% if @wn_pronunciation.present? %>
 			Pronunciation: <%= link_to 'Hear the word', 
-											@wn_pronunciation.first['fileUrl'], :target => :blank %>
+				@wn_pronunciation.first['fileUrl'], :target => :blank %>
 		<% else %>
 		<% end %>
 	</p>
@@ -22,7 +22,6 @@
 			Definitions:
 			<ul>
 				<% @wn_definitions.each do |definition| %>
-
 					<li>
 						(<%= definition["partOfSpeech"] %>)	<%= definition["text"] %>
 					</li>

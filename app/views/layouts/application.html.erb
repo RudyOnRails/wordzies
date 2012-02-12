@@ -11,16 +11,12 @@
 			<div class="container">
 				<h1><%= link_to 'Wordzies', root_url %></h1>
 				<div id="signin">
-					<ul>
-						<li><%= link_to "Home", root_url %></li>
-						<li>|</li>
-						<li><% if current_user %>
-						  Welcome <%= current_user.name %>!
-						  <%= link_to "Sign Out", signout_path %>
+						<% if current_user %>
+							<span>"Welcome #{current_user.name}!</span>
+							<%= link_to "Sign Out", signout_path, :class => "btn-success btn" %>
 						<% else %>
-						  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
-						<% end %></li>
-					</ul>
+							<%= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn" %>
+						<% end %>
 				</div><!-- #signin -->
 				<div id="searchbox">
 					<%= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do %>
