@@ -12,15 +12,15 @@
         	<% end %>
         </p>
 
-        <p>
+        <h2>
         	<% if @wn_pronunciation.present? %>
         		Pronunciation: <%= link_to 'Hear the word', 
         										@wn_pronunciation.first['fileUrl'], :target => :blank %>
         	<% else %>
         	<% end %>
-        </p>
+        </h2>
 
-        <p>
+        <h2>
         	<% if @wn_definitions.present? %>
         		Definitions:
         		<ul>
@@ -32,9 +32,9 @@
         		</ul>
         	<% else %>
         	<% end %>
-        </p>
+        </h2>
 
-        <p>
+        <h2>
         	<% if @wn_example.present? %>
         		Example:<br />
         		<ul>
@@ -42,9 +42,9 @@
         		</ul>
         	<% else %>
         	<% end %>
-        </p>
+        </h2>
 
-        <p>
+        <h2>
         	<% if @wn_synonyms.present? %>
         		Synonyms:
         		<ul>
@@ -58,7 +58,7 @@
         		</ul>
         	<% else %>
         	<% end %>
-        </p>
+        </h2>
 
     <% if Word.find_by_wn_id(@wn_word_id) != nil %>
     	<%= render 'user_usage' if @wn_word_id == Word.find_by_wn_id(@wn_word_id)['wn_id'] %>
