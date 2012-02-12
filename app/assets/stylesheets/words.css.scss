@@ -24,6 +24,15 @@
 	text-align: center;
 }
 
+#mywordzies h2 {
+	font-family: 'Lilita One', cursive;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	text-align: center;
+}
+
+
 #mywordzies ul li {
 		font-size: 25px;
 		text-align: center;
@@ -73,23 +82,29 @@ ul li:hover {
 	text-align: center;
 }
 
-#searchwordzies h1 {
-	font-family: 'Lilita One', cursive;
-	margin: 20px 0;
-	font-size: 40px;
+#searchwordzies {
+	text-align: center;
 	list-style: none;
 	text-transform: capitalize;
 	line-height: 1.2;
-	margin-left: 20px;
+}
+#searchwordzies h1 {
+	font-family: 'Lilita One', cursive;
+	font-size: 40px;
+	text-align: center;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	text-align: center;
 }
 
 #searchwordzies h2 {
 	font-family: 'Lilita One', cursive;
 	margin: 20px 0;
 	list-style: none;
+	text-align: center;
 	text-transform: capitalize;
 	line-height: 1.2;
-	margin-left: 20px;
 	text-transform: capitalize;
 }
 

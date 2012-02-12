@@ -1,5 +1,5 @@
 <%= form_for(@use) do |f| %>
-	<%= f.label :example, "Use your Wordzy:" %>
+	<%= f.label :example, "Use your Wordzy in a sentence:" %>
 	<%= f.text_area :example, :rows => 3 %><br />
 	<%= f.hidden_field(:word_id, value: @word.id) %>
 	<%= f.hidden_field(:user_id, value: @current_user.id) %>
@@ -8,7 +8,12 @@
 <%= link_to "Tweet", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "This is the new word I learned on Wordzies.com: ##{@the_word}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %>
 
 <ul>
-	<% @uses.each do |use| %>
-	<li><%= use.example %></li>
-	<% end %>
+	<% @uses.last.example %>
+		<li>
+			<%#= use.example %><br />
+			Share your Wordzy sentence with friends! <%= link_to "Tweet My Wordzy Sentence", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "My new wordzy in a sentence: #{@uses.last.example}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %><br />
+			<%= render 'text_a_friend' %>
+		</li>
+
+	<%# end %>
 </ul>

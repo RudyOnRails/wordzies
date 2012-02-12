@@ -7,7 +7,7 @@ class UsesController < ApplicationController
   def create
     @use = Use.new(params[:use])
     @use.save
-    
-    redirect_to root_url
+    # render :controller => "words", :action => "show"
+    redirect_to "/words/#{:word}"
   end
 end

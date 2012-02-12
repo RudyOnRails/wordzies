@@ -20,7 +20,7 @@
 				</div><!-- #signin -->
 				<div id="searchbox">
 					<%= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do %>
-						<%= text_field_tag(:q, "find a wordzy") %>
+						<%= text_field_tag :q, nil, :placeholder => "find a wordzy" %>
 						<%= submit_tag("Search", :id => "addwordzy-btn", :class => "btn-warning btn-large") %>
 					<% end %>
 				</div><!-- #searchbox -->
