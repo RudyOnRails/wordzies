@@ -4,3 +4,9 @@
 	<%= f.submit "Add your sentence", :class => "btn-primary" %>
 <% end %>
 <%= link_to "Tweet", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "This is the new word I learned on Wordzies.com: ##{@the_word}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %>
+
+<ul>
+	<% @uses.each do |use| %>
+	<li><%= use.example %></li>
+	<% end %>
+</ul>

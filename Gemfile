@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
 gem 'wordnik'
-gem 'omniauth'
-gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
+# gem 'omniauth'
+# gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 # Bundle edge Rails instead:
