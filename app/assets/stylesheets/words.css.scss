@@ -4,23 +4,31 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lilita+One);
 
-#mywordzies {
-	background: #d6d8da;
-	width: 498px;
-	border: 2px solid #88d56b;
-	height: 538px;	
-}
 
 #mywordzies ul li {
 	font-family: 'Lilita One', cursive;
-	background: #fff;
-	border: 6px solid #ccc;
-	height: 100px;
+	background: #d6d8da;
+	height: 20px;
 	margin: 20px;
 	padding: 20px;
 	width: 400px;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
 }
 
-#addwordzy-btn{
-	
+ul li:hover {
+	text-decoration: none;
+}
+
+#randomwordzies ul li  {
+	font-family: 'Lilita One', cursive;
+	background: #d6d8da;
+	height: 20px;
+	margin: 20px;
+	padding: 20px;
+	width: 400px;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
 }

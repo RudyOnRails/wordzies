@@ -1,21 +1,27 @@
-<h1>Wordzies Word Banks</h1>
-
-<div id="mywordzies">
-
-	<ol>
-		<% @words.each do |wordzie| %>
-		<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
-		<% end %>
-	</ol>
+<div class="grid">
+  <div class="span6">
+    <div id='mywordzies'>
+      <h1>Wordzies Word Banks</h1>
+	      <ul>
+      		<% @words.each do |wordzie| %>
+      		<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
+      		<% end %>
+      	</ul>
+    </div>
 	<p>
 		Random words to add to your wordzies:
 	</p>
-	<ul>
-		<% @suggested_words.each do |word| %>
-			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
-		<% end %>
-	</ul>
+  </div>
 
+<div class="span4">
+    <div id='randomwordzies'>
+	    <ul>
+    		<% @suggested_words.each do |word| %>
+    			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
+    		<% end %>
+    	</ul>
+	  </div>
+  </div>
 </div>
 
 

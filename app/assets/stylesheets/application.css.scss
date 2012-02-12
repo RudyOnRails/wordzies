@@ -23,6 +23,14 @@
 	color: #8ec659;
 	padding: 10px;
 }
+
+#header h1 a {
+	color: #8ec659;
+}
+#header h1 a:hover {
+	color: #639c4f;
+	text-decoration: none;
+}
 #searchbox {
 	width: 500px;
 	margin: 0 auto;
