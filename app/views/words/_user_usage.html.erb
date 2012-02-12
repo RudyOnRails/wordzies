@@ -9,13 +9,11 @@
 <% end %>
 </div>
 
-<ul>
-	<% @uses.last.example %>
-		<li>
-			<%#= use.example %><br />
-			Share your Wordzy sentence with friends! <%= link_to "Tweet My Wordzy Sentence", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "My new wordzy in a sentence: #{@uses.last.example}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %><br />
+<div id="center">
+	<%= @uses.last.example %><br /><br /><br />
+	
+			Share your Wordzy sentence with friends! <br /><%= link_to "Tweet My Wordzy Sentence", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "My new wordzy in a sentence: #{@uses.last.example}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %><br />
 			<%= render 'text_a_friend' %>
-		</li>
 
 	<%# end %>
-</ul>
+</div>
