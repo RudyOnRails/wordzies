@@ -5,50 +5,79 @@
 @import url(http://fonts.googleapis.com/css?family=Lilita+One);
 
 
-#mywordzies ul li {
-		font-family: 'Lilita One', cursive;
-		background: #d6d8da;
-		margin: 20px 0;
-		font-size: 40px;
-		list-style: none;
-		text-transform: capitalize;
-		line-height: 1.2;
-	}
+#mywordzies {
+		
+}
 
 #mywordzies h1 {
 	font-family: 'Lilita One', cursive;
-	margin: 20px 0;
 	font-size: 40px;
 	list-style: none;
 	text-transform: capitalize;
 	line-height: 1.2;
 	margin-left: 20px;
+	border-right: 1px solid #d6d8da;
+}
+
+#mywordzies ul li {
+		font-family: 'Lilita One', cursive;
+		font-size: 40px;
+		padding-left: 10px;
+		list-style: none;
+		text-transform: capitalize;
+		line-height: 1.2;
+		border-right: 1px solid #d6d8da;
+		background: #3e4550;
+		background: url('linear-gradient.png') 0 0 repeat-x;
+	 	background: -moz-linear-gradient(top, #3e4550, #646464);
+		background: -ms-linear-gradient(top, #3e4550, #646464);
+		background: -o-linear-gradient(top, #3e4550, #646464);
+		background: -webkit-linear-gradient(top, #3e4550,#646464);
+		background: linear-gradient(top, #3e4550, #646464);
+		margin-top: 10px;
+		.container {
+			position: relative;
+		}
 }
 
 ul li:hover {
 	text-decoration: none;
 }
 
-#randomwordzies ul li  {
-	font-family: 'Lilita One', cursive;
-	background: #d6d8da;
-	margin: 20px;
-	font-size: 40px;
-	list-style: none;
-	text-transform: capitalize;
-	line-height: 1.2;
-}
 
 #randomwordzies h1 {
-	font-family: 'Lilita One', cursive;
-	margin: 20px 0;
-	padding-left: 20px;
-	font-size: 40px;
-	list-style: none;
-	text-transform: capitalize;
-	line-height: 1.2;
-	margin-left: 20px;
+		font-family: 'Lilita One', cursive;
+		font-size: 40px;
+		list-style: none;
+		text-transform: capitalize;
+		line-height: 1.2;
+		margin-left: 20px;
+		border-right: 1px solid #d6d8da;
+	}
+
+
+#randomwordzies ul li  {
+		font-family: 'Lilita One', cursive;
+		font-size: 40px;
+		list-style: none;
+		padding-left: 10px;
+		text-transform: capitalize;
+		line-height: 1.2;
+		border-right: 1px solid #d6d8da;
+		background: #3e4550;
+		background: url('linear-gradient.png') 0 0 repeat-x;
+	 	background: -moz-linear-gradient(top, #3e4550, #646464);
+		background: -ms-linear-gradient(top, #3e4550, #646464);
+		background: -o-linear-gradient(top, #3e4550, #646464);
+		background: -webkit-linear-gradient(top, #3e4550,#646464);
+		background: linear-gradient(top, #3e4550, #646464);
+		margin-top: 10px;
+		.container {
+			position: relative;
+		}
 }
+
+
 
 #searchwordzies h1 {
 	font-family: 'Lilita One', cursive;
