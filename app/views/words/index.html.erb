@@ -1,12 +1,11 @@
-<h1>Wordzies Word Banks</h1>
 
-<div id="mywordzies">
-
-	<ol>
+<table class="table table-striped">
+  <h1>Wordzies Word Banks</h1>
+	<ul>
 		<% @words.each do |wordzie| %>
 		<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
 		<% end %>
-	</ol>
+	</ul>
 	<p>
 		Random words to add to your wordzies:
 	</p>
@@ -15,7 +14,7 @@
 			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
 		<% end %>
 	</ul>
+</table>
 
-</div>
 
 
