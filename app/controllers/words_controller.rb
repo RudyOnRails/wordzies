@@ -1,7 +1,11 @@
 class WordsController < ApplicationController
   
   def index
-    @words = Word.all
+    if current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      @words = @current_user.words.all
+    else
+    end
     @suggested_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc', :limit => 5)
   end
   
@@ -25,11 +29,18 @@ class WordsController < ApplicationController
   end
   
   def create
-    @word = Word.new(params[:word])
-    @word.save
 
-
-    redirect_to root_url
+    if current_user
+      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+      @word = Word.new(params[:word])
+      @word.save
+      @use = Use.new :word_id => @word.id, :user_id => @current_user.id
+      @use.save
+      redirect_to root_url
+    else
+      # flash[:notice] = "Please sign in"
+      redirect_to "http://localhost:3000/auth/twitter"
+    end
   end
   
 end
