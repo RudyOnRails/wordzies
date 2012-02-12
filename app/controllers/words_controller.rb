@@ -26,6 +26,9 @@ class WordsController < ApplicationController
     
     @use = Use.new
     @uses = Use.all
+    
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    
   end
   
   def create
