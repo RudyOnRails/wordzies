@@ -1,6 +1,6 @@
 <%= form_for(@use) do |f| %>
-	<%= f.label :example, "Use your Wordzies!" %>
+	<%= f.label :example, "Use your Wordzy:" %>
 	<%= f.text_area :example, :rows => 3 %><br />
-	<%= f.submit "Add your sentence", :class => "btn-primary" %>
+	<%= f.submit "Update", :class => "btn-primary" %>
 <% end %>
 <%= link_to "Tweet", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "This is the new word I learned on Wordzies.com: ##{@the_word}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none" %>
