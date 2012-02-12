@@ -12,7 +12,7 @@
 				<h1><%= link_to 'Wordzies', root_url %></h1>
 				<div id="signin">
 						<% if current_user %>
-							<span><%= "Welcome #{current_user.name}!" %></span>
+							<span><%= "Welcome, #{current_user.name}" %></span>
 							<%= link_to "Sign Out", signout_path, :class => "btn-success btn" %>
 						<% else %>
 							<%= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn" %>
