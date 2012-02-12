@@ -4,7 +4,10 @@
 		<%= form_for(@word) do |f| %>
 			<%= f.hidden_field(:wn_title, value: @the_word) %>
 			<%= f.hidden_field(:wn_id, value: @wn_word_id) %>
+			<% if current_user %>
 			<%= f.submit("Add Word to My Wordzie Bank", :class => "btn-success btn-large", :id => "search-btn") %>
+			<% else %>
+			<% end %>
 		<% end %>
 	</p>
 	<p>
@@ -19,6 +22,7 @@
 			Definitions:
 			<ul>
 				<% @wn_definitions.each do |definition| %>
+
 					<li>
 						(<%= definition["partOfSpeech"] %>)	<%= definition["text"] %>
 					</li>
