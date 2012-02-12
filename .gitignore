@@ -15,3 +15,4 @@
 /tmp
 /config/initializers/wordnik.rb
 /config/initializers/omniauth.rb
+/config/initializers/twilio.rb

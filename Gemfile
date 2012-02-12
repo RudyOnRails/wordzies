@@ -4,7 +4,10 @@ gem 'rails', '3.1.3'
 gem 'wordnik'
 # gem 'omniauth'
 # gem 'omniauth-twitter', :git => 'https://github.com/arunagw/omniauth-twitter.git'
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+# gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+# gem 'twilio-ruby'
+# gem 'twiliolib'
+# gem 'twilio-rb'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'

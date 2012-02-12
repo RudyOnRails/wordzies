@@ -15,5 +15,5 @@ WordziesCA::Application.routes.draw do
   resources :uses
   
   match '/auth/twitter/callback', to: 'sessions#create'
-  
+    
 end
