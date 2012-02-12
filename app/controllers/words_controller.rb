@@ -19,12 +19,15 @@ class WordsController < ApplicationController
     @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
     @is_word_in_database = 
     @word = Word.new
+    
     @use = Use.new
   end
   
   def create
     @word = Word.new(params[:word])
     @word.save
+
+    
     redirect_to root_url
   end
   
