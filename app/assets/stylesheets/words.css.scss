@@ -8,13 +8,22 @@
 #mywordzies ul li {
 	font-family: 'Lilita One', cursive;
 	background: #d6d8da;
-	height: 20px;
-	margin: 20px;
-	padding: 20px;
+	line-height: 1.2;
 	width: 400px;
 	font-size: 40px;
 	list-style: none;
 	text-transform: capitalize;
+}
+
+
+#mywordzies h1 {
+	font-family: 'Lilita One', cursive;
+	margin: 20px 0;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	margin-left: 20px;
 }
 
 ul li:hover {
@@ -32,3 +41,15 @@ ul li:hover {
 	list-style: none;
 	text-transform: capitalize;
 }
+
+#randomwordzies h1 {
+	font-family: 'Lilita One', cursive;
+	margin: 20px 0;
+	padding-left: 20px;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
+	line-height: 1.2;
+	margin-left: 20px;
+}
+

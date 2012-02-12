@@ -1,20 +1,18 @@
 <div class="row">
   <div class="span6">
     <div id='mywordzies'>
-      <h1>Wordzies Word Banks</h1>
+      <h1>Wordzies In Progress</h1>
 	      <ul>
       		<% @words.each do |wordzie| %>
       		<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
       		<% end %>
       	</ul>
     </div>
-	<p>
-		Random words to add to your wordzies:
-	</p>
   </div>
 
-<div class="span4">
+<div class="span5">
     <div id='randomwordzies'>
+      <h1>Random Wordzies</h1>
 	    <ul>
     		<% @suggested_words.each do |word| %>
     			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
