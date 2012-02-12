@@ -5,7 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lilita+One);
 
 
-ul li {
+#mywordzies ul li {
 	font-family: 'Lilita One', cursive;
 	background: #d6d8da;
 	height: 20px;
@@ -20,6 +20,15 @@ ul li {
 ul li:hover {
 	text-decoration: none;
 }
-#addwordzy-btn{
-	
+
+#randomwordzies ul li  {
+	font-family: 'Lilita One', cursive;
+	background: #d6d8da;
+	height: 20px;
+	margin: 20px;
+	padding: 20px;
+	width: 400px;
+	font-size: 40px;
+	list-style: none;
+	text-transform: capitalize;
 }
