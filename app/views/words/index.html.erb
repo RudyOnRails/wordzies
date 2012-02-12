@@ -1,4 +1,4 @@
-<div class="row">
+
   <div class="span6">
     <div id='mywordzies'>
       <h1>Wordzies In Progress</h1>
@@ -13,7 +13,7 @@
     </div>
   </div>
 
-<div class="span5">
+<div class="span6">
     <div id='randomwordzies'>
       <h1>Random Wordzies</h1>
 	    <ul>
@@ -21,9 +21,9 @@
     			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
     		<% end %>
     	</ul>
-			<%= link_to 'I already know these wordzies!', root_url %><br />
-			<%= link_to 'I don\'t like these wordzies, suggest new ones!', root_url %>
+			<p class="center"><%= link_to 'I already know these wordzies!', root_url, :class => "btn" %></p>
+		  <p class="center"><%= link_to 'I don\'t like these wordzies, suggest new ones!', root_url, :class => "btn btn-danger" %></p>
 	  </div>
   </div>
-</div>
+
 
