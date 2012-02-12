@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(:version => 20120212000451) do
     t.string   "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
     t.string   "avatar_file_name"
     t.string   "avatar_content_type"
     t.integer  "avatar_file_size"
     t.datetime "avatar_updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   create_table "uses", :force => true do |t|
