@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="row">
   <div class="span8">
     <div id='wordzieresult'>
@@ -68,13 +69,18 @@
     </div>
   </div>
 =======
+=======
+>>>>>>> f06d03af24ac3891d9cad4a72afa7b505f0401d5
 <div class="span12">
 	<h1><%= @the_word %></h1>
 	<p>
 		<%= form_for(@word) do |f| %>
 			<%= f.hidden_field(:wn_title, value: @the_word) %>
 			<%= f.hidden_field(:wn_id, value: @wn_word_id) %>
+			<% if current_user %>
 			<%= f.submit("Add Word to My Wordzie Bank", :class => "btn-success btn-large", :id => "search-btn") %>
+			<% else %>
+			<% end %>
 		<% end %>
 	</p>
 	<p>
@@ -89,6 +95,7 @@
 			Definitions:
 			<ul>
 				<% @wn_definitions.each do |definition| %>
+
 					<li>
 						(<%= definition["partOfSpeech"] %>)	<%= definition["text"] %>
 					</li>
@@ -128,4 +135,3 @@
 	<% else %>
 	<% end %>
 </div>
->>>>>>> 8fcbf55a3f4a3ea34e5a3a0cef3265850a74162c
