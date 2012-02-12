@@ -60,7 +60,7 @@
 <div class="span5">
 	<% if Word.find_by_wn_id(@wn_word_id) != nil %>
 	<p>
-		<h1 style="text-transform:capitalize; text-align:center">Ways to Practice this Wordzy:</h1>
+		<h1 style="text-transform:capitalize; text-align:center">Practice this Wordzy:</h1>
 	</p>
 	
 		<%= render 'user_usage' if @wn_word_id == Word.find_by_wn_id(@wn_word_id)['wn_id'] %>
