@@ -3,10 +3,13 @@
 <div id="mywordzies">
 
 	<ol>
+		<% if current_user %>
 		<% @words.each do |wordzie| %>
 		<li><%= link_to wordzie.wn_title, show_word_url(wordzie.wn_title) %></li>
 		<% end %>
 	</ol>
+	<% else %>
+	<% end %>
 	<p>
 		Random words to add to your wordzies:
 	</p>
@@ -15,5 +18,6 @@
 			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
 		<% end %>
 	</ul>
+	
 
 </div>

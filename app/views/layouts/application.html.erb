@@ -9,7 +9,14 @@
 <body>
 
 	<a href="http://localhost:3000">Home</a> | 
-	<%= link_to "Sign in with Twitter", "/auth/twitter" %>
+	
+	<% if current_user %>
+	  Welcome <%= current_user.name %>!
+	  <%= link_to "Sign Out", signout_path %>
+	<% else %>
+	  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+	<% end %>
+	
 
   <div class="container">
     <header id="header">
