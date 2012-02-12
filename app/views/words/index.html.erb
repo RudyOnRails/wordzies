@@ -1,27 +1,27 @@
 <div class="row">
+  <div class="span6">
+    <div id='mywordzies'>
+      <h1>Wordzies In Progress</h1>
+	      <ul>
+					<% if current_user %>
+      		<% @words.each do |wordzy| %>
+      		<li><%= link_to wordzy.wn_title, show_word_url(wordzy.wn_title) %></li>
+      		<% end %>
+      	</ul>
+	<% else %>
+		<% end %>
+    </div>
+  </div>
 
-	<div class="span6">
-		<div id='mywordzies'>
-			<h1>Wordzies In Progress</h1>
-			<ul>
-				<% if current_user %>
-				<% @words.each do |wordzy| %>
-				<li><%= link_to wordzy.wn_title, show_word_url(wordzy.wn_title) %></li>
-				<% end %>
-			</ul>
-			<% else %>
-			<% end %>
-		</div>
-	</div>
-
-	<div class="span5">
-		<div id='randomwordzies'>
-			<h1>Random Wordzies</h1>
-			<ul>
-				<% @suggested_words.each do |word| %>
-				<li><%= link_to word['word'], show_word_url(word['word']) %></li>
-				<% end %>
-			</ul>
-		</div>
-	</div>
+<div class="span5">
+    <div id='randomwordzies'>
+      <h1>Random Wordzies</h1>
+	    <ul>
+    		<% @suggested_words.each do |word| %>
+    			<li><%= link_to word['word'], show_word_url(word['word']) %></li>
+    		<% end %>
+    	</ul>
+	  </div>
+  </div>
 </div>
+
