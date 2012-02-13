@@ -2,8 +2,9 @@ Wordzies is an app to help you expand your vocabulary. I often hear new words an
 
 On the weekend of Feb 10th-12th, 2012, I entered the idea into Code Academy's Startup Weekend, and the following classmates joined my team:
 
-David Levine
-Benjamin Block
-Kevin Hoffman
-Robert Milner
-
+<ul>
+<li>David Levine</li>
+<li>Benjamin Block</li>
+<li>Kevin Hoffman</li>
+<li>Robert Milner</li>
+</ul>
