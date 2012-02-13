@@ -16,3 +16,11 @@
 /config/initializers/wordnik.rb
 /config/initializers/omniauth.rb
 /config/initializers/twilio.rb
+
+tmp/**/*
+tmp/*
+doc/api
+doc/app
+*.swp
+*~
+.DS_Store
