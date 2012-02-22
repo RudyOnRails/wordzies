@@ -24,3 +24,5 @@ doc/app
 *.swp
 *~
 .DS_Store
+/UXdocs
+.rvmrc
