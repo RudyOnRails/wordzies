@@ -7,10 +7,15 @@ WordziesCA::Application.routes.draw do
   # get "words/index"
   # resources :words, :only => [:index]
 
+
+
+  resources :words
   get '/search' => 'words#search'
   get 'words/:word' => 'words#show', :as => 'show_word'
-  post '/words' => 'words#create'
+  #post '/words' => 'words#create'
   
+  
+  #resources :words
   resources :users
   resources :uses
   

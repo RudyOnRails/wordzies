@@ -28,6 +28,12 @@
 		</header><!-- #header -->
 		<div class="container">
 			<div class ="hr-wrapper"><hr class="hr" /></div><div class="row">
+				
+				<% if flash[:notice] %>
+				<div class="alert alert-success"> <%= flash[:notice] %></div>
+				<% end %>
+				
+				
 				<%= yield %>
 			</div><!-- .row -->
 		</div><!-- .container -->
