@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'haml'
 gem 'rails', '3.1.3'
 gem 'wordnik'
 gem 'omniauth'
