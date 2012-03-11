@@ -1,0 +1,18 @@
+/ #center
+/	= link_to "Tweet", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "I'm learning ##{@the_word} on wordzies.com", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none"
+/ 	= form_for(@use) do |f|
+/ 		= f.label :example, "Use your Wordzy in a sentence:"
+/ 		= f.text_area :example, :rows => 3
+/ 		%br
+/ 		= f.hidden_field(:word_id, value: @word.id)
+/ 		= f.hidden_field(:user_id, value: @current_user.id)
+/ 		= f.submit "Update", :class => "btn-primary"
+
+/ #center
+/ 	= @uses.last.example
+/ 		%br
+/ 		Share your Wordzy sentence with friends! 
+/ 		%br
+/ 		= link_to "Tweet My Wordzy Sentence", "https://twitter.com/share", "class" => "twitter-share-button", "data-text" => "My new wordzy in a sentence: #{@uses.last.example}", "data-via" => "wordzies", "data-lang" => "en", "data-size" => "large", "data-count" => "none"
+/ 			%br
+/ 			/ = render 'text_a_friend'
