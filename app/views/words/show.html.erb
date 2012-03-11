@@ -14,8 +14,7 @@
 	</p>
 	<p>
 		<% if @wn_pronunciation.present? %>
-			Pronunciation: <%= link_to 'Hear the word', 
-				@wn_pronunciation.first['fileUrl'], :target => :blank %>
+			Pronunciation: <%= link_to 'Hear the word', @wn_pronunciation.first['fileUrl'], :target => :blank %>
 		<% else %>
 		<% end %>
 	</p>

@@ -21,14 +21,14 @@ class WordsController < ApplicationController
     @wn_definitions = Wordnik.word.get_definitions(@the_word, :limit => 5)
     @wn_example = Wordnik.word.get_top_example(@the_word)
     @wn_synonyms = Wordnik.word.get_related(@the_word, :type => 'synonym')
+    # logger.debug "@the_word #{@the_word.inspect}"
     @wn_pronunciation = Wordnik.word.get_audio(@the_word, :limit => 1)
     @is_word_in_database = 
     @word = Word.new
-    
+    # logger.debug @wn_pronunciation.first.inspect
+
     @use = Use.new
     @uses = Use.all
-    
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
     
   end
   
