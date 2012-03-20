@@ -6,7 +6,7 @@ class WordsController < ApplicationController
       @my_wordzies = @current_user.words.find(:all, :order => "created_at ASC")
     end
 
-    @random_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc')
+    # @random_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc')
   
   end
   
