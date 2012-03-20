@@ -13,9 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-/config/initializers/wordnik.rb
-/config/initializers/omniauth.rb
-/config/initializers/twilio.rb
+
 
 tmp/**/*
 tmp/*
@@ -24,5 +22,7 @@ doc/app
 *.swp
 *~
 .DS_Store
-/UXdocs
+UXdocs/
 .rvmrc
+
+config/api_keys.yml
