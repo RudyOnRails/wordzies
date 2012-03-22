@@ -5,25 +5,48 @@
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	%body
-		%header#header
-			.container
-				%h1= link_to 'Wordzies', root_url
-				#signin
-					- if current_user
-						%span
-							= "Welcome, #{current_user.name}"
-							= link_to "Sign Out", signout_path, :class => "btn-danger btn"
-					- else
-						= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn"
-				#searchbox
-					= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
-						= text_field_tag :q, nil, :placeholder => "find a wordzy"
-						= submit_tag("Search", :id => "addwordzy-btn", :class => "btn-warning btn")
+		#container
+			.dictionary
+				%h1= link_to (image_tag 'logo.png'), root_url
+		#signin
+			- if current_user
+				%span
+					= "Welcome, #{current_user.name}"
+					= link_to "Sign Out", signout_path, :class => "btn-danger btn"
+			- else
+				= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn"
+		#searchbox
+			.searchfield
+				= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
+					= text_field_tag :q, nil, :placeholder => "What's the word?"
+					= submit_tag("Define", :id => "addwordzy-btn", :class => "btn-warning btn")
+							
+/	%body
+/		%header#header
+/			.container
+/				%h1= link_to 'Wordzies', root_url
+/				#signin
+/					- if current_user
+/						%span
+/							= "Welcome, #{current_user.name}"
+/							= link_to "Sign Out", signout_path, :class => "btn-danger btn"
+/					- else
+/						= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn"
+/				#searchbox
+/					= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
+/						= text_field_tag :q, nil, :placeholder => "find a wordzy"
+/						= submit_tag("Search", :id => "addwordzy-btn", :class => "btn-warning btn")
 
-	.container
-		- if flash[:notice]
-			.alert.alert-success= flash[:notice]	
-		= yield
+
+
+
+
+
+
+/	.container
+/		- if flash[:notice]
+/			.alert.alert-success= flash[:notice]	
+/		= yield
 
 /	#footer
 /		.container
