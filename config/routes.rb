@@ -1,8 +1,8 @@
 WordziesCA::Application.routes.draw do
-  
-  get "pages/landing"
-
+    
   root :to => 'words#index'
+
+  get "pages/landing"
   
   # get "words/index"
   # resources :words, :only => [:index]

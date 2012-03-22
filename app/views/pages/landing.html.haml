@@ -1,17 +1,21 @@
-%body
-	#container
-		.dictionary
-			%h1= link_to (image_tag 'logo.png'), root_url
-	#signin
-		- if current_user
-			%span
-				= "Welcome, #{current_user.name}"
-				= link_to "Sign Out", signout_path, :class => "btn-danger btn"
-		- else
-			= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn"
-	#searchbox
-		.searchfield
-			= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
-				= text_field_tag :q, nil, :placeholder => "What's the word?"
-				= submit_tag("Define", :id => "addwordzy-btn", :class => "btn-warning btn")
-						
+%html
+	%head
+	%body#landingbody
+		#landingcontainer
+			.dictionary
+				%h1= link_to (image_tag 'logo.png'), root_url
+		#signin
+			- if current_user
+				%span
+					= "Welcome, #{current_user.name}"
+					= link_to "Sign Out", signout_path, :class => "btn-danger btn"
+			- else
+				= link_to "Sign in", "/auth/twitter"
+				|
+				= link_to "Sign up", new_user_url
+		#searchbox
+			.searchfield
+				= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
+					= text_field_tag :q, nil, :placeholder => "What's the word?"
+					= submit_tag("Define", :id => "addwordzy-btn", :class => "btn-warning btn")
+							
