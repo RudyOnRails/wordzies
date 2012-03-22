@@ -1,5 +1,7 @@
 WordziesCA::Application.routes.draw do
   
+  get "pages/landing"
+
   root :to => 'words#index'
   
   # get "words/index"
