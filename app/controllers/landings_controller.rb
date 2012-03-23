@@ -1,6 +1,10 @@
 class LandingsController < ApplicationController
   def annie1
-    render :layout => 'landings/annie1_layout'
+    if current_user
+      redirect_to :words
+    else
+      render :layout => 'landings/annie1_layout'
+    end
   end
 
 end
