@@ -1,0 +1,93 @@
+/*annie1 landing page*/
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+#landingcontainer {
+	width:90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 100%;
+	background: black;
+}
+
+.dictionary {
+	width: 755px;
+	height: 998px;
+	/*display: block;*/
+	position: relative;
+	/*z-index: -1;*/
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 4%;
+	background: url('dictionary.png');
+	border-color:#611104;
+	border-style: solid;
+	border-width: 10px;
+}
+
+.dictionary h1{
+	height:144px;
+	width:553px; 
+	margin-top:2%;
+	margin-left: -6.85%;
+	position: absolute;
+	border: 6px solid black;
+	background: white;
+}
+
+#landingsearchbox{
+	height: 280px;
+	width: 100%;
+	background: black;
+	top: 300px;
+	margin-bottom:40%;
+	left:auto;
+	right:auto;
+	position:absolute;
+	border-color:#611104;
+	border-left-color: black;
+	border-right-color: black;
+	border-style: solid;
+	border-width: 10px;
+}
+
+#landingq {
+	width: 600px;
+	height: 70px;
+	margin-top:50px;
+	margin-left:20px;
+}
+
+/*.btn-danger {
+	font-size: 20px;
+	background-color: #da4f49;
+	background-image: -moz-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -ms-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#bd362f));
+	background-image: -webkit-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: -o-linear-gradient(top, #ee5f5b, #bd362f);
+	background-image: linear-gradient(top, #ee5f5b, #bd362f);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ee5f5b', endColorstr='#bd362f', GradientType=0);
+	border-color: #bd362f #bd362f #802420;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}*/
+
+.landingsearchfield {
+	width:75.6%;
+	height:215px; 
+	position: relative;
+	margin-left: 12.2%;
+	margin-top: 20px;
+	margin-right: 12.2%;
+	position: absolute;
+	background:#b22403; 
+	border-style: solid;
+	border-width: 7px;
+	border-color: white;
+	border-radius: 3px;
+}

@@ -7,52 +7,23 @@
 	%body
 		%header#header
 			.container
-				%h1= link_to 'Wordzies', root_url
+				%h1= link_to 'Wordzies', :words
 				#signin
 					- if current_user
 						%span
 							= "Welcome, #{current_user.name}"
-							= link_to "Sign Out", signout_path, :class => "btn-danger btn"
+							= link_to "Log Out", signout_path
 					- else
-						= link_to "Sign in with Twitter", "/auth/twitter", :class => "btn-success btn"
+						= link_to "Log In", "/auth/twitter"
 				#searchbox
 					= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
 						= text_field_tag :q, nil, :placeholder => "find a wordzy"
-						= submit_tag("Search", :id => "addwordzy-btn", :class => "btn-warning btn")
-	= yield
-	
-	
-/ 	%body
-/ 		%header#header
-/ 			.container
-/ 				%h1= link_to (image_tag 'logo.png'), root_url
-/ 		#signin
-/ 			- if current_user
-/ 				%span
-/ 					= "Welcome, #{current_user.name}"
-/ 					= link_to "Sign Out", signout_path, :class => "btn-danger btn"
-/ 			- else
-/ 				= link_to "Sign in", "/auth/twitter"
-/ 				|
-/ 				= link_to "Sign up", new_user_url
-/ 		#searchbox
-/ 			.searchfield
-/ 				= form_tag({ :controller => 'words', :action => 'search' }, :method => "get") do
-/ 					= text_field_tag :q, nil, :placeholder => "What's the word?"
-/ 					= submit_tag("Define", :id => "addwordzy-btn", :class => "btn-warning btn")
-/ 					
-/		= yield
-							
-	
+						= submit_tag("Search", :id => "addwordzy-btn", :class => "btn-warning btn")	
+		.container
+			- if flash[:notice]
+				.alert.alert-success= flash[:notice]	
+			= yield
 
-
-
-
-/	.container
-/		- if flash[:notice]
-/			.alert.alert-success= flash[:notice]	
-/		= yield
-
-/	#footer
-/		.container
-/		%p Wordzies Copyright 2012
+		#footer
+			.container
+			%p Wordzies &copy 2012

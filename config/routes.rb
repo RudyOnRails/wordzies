@@ -1,8 +1,8 @@
 WordziesCA::Application.routes.draw do
     
-  root :to => 'words#index'
+  root :to => 'landings#annie1'
 
-  get "pages/landing"
+  get "landings/annie1"
   
   # get "words/index"
   # resources :words, :only => [:index]
@@ -17,6 +17,7 @@ WordziesCA::Application.routes.draw do
   get "uses/create"
   
   match '/auth/twitter/callback', to: 'sessions#create'
+  match '/auth/twitter', :as => :twitter_auth
 
   match "/signout" => "sessions#destroy", :as => :signout
   

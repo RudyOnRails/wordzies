@@ -3,7 +3,7 @@ class WordsController < ApplicationController
   def index
     
     if current_user
-      @my_wordzies = @current_user.words.find(:all, :order => "created_at ASC")
+      @all_wordzies = @current_user.words.find(:all, :order => "created_at ASC")
     end
 
     # @random_words = Wordnik.words.get_random_words(:hasDictionaryDef => 'true', :sortBy => 'alpha', :sortOrder => 'asc')

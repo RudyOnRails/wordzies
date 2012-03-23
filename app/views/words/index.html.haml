@@ -7,10 +7,10 @@
 
 .span6
 	#mywordzies
-		%h1 My Wordzies
+		%h1 List: All
 		%ul
 			- if current_user
-				- @my_wordzies.each do |wordzy|
+				- @all_wordzies.each do |wordzy|
 					%li
 						= link_to wordzy.wn_title, show_word_url(wordzy.wn_title)
 						= link_to("Delete", word_path(:id=> wordzy.id) ,:method =>:delete, :class => "btn btn-danger")
