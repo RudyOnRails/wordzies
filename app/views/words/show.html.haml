@@ -1,14 +1,13 @@
 .span6	
 	%p
-		%h1(style="text-transform:capitalize; text-align:center")
+		%h1
 			= @the_word
-	%p
-		= form_for(@word) do |f|
-			= f.hidden_field(:wn_title, value: @the_word)
-			= f.hidden_field(:wn_id, value: @wn_word_id)
-			- if logged_in
-				= f.submit("Add Word to My Wordzie Bank", :class => "btn-success btn-large", :id => "search-btn")
-			- else
+			= form_for(@word) do |f|
+				= f.hidden_field(:wn_title, value: @the_word)
+				= f.hidden_field(:wn_id, value: @wn_word_id)
+				- if logged_in
+					= f.submit("Add", :class => "btn-success btn-medium", :id => "search-btn")
+				- else
 
 	%p
 		- if @wn_pronunciation.present?
