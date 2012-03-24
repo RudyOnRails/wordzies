@@ -5,25 +5,15 @@
 / 		words. We help you integrate your "wordzies" into your everyday vocabulary. 
 / 		Sign in with your Twitter account to start using wordzies now!
 
-.span6
+.span4
 	#mywordzies
 		%h1 List: All
 		%ul
-			- if current_user
+			- if logged_in
 				- @all_wordzies.each do |wordzy|
 					%li
 						= link_to wordzy.wn_title, show_word_url(wordzy.wn_title)
 						= link_to("Delete", word_path(:id=> wordzy.id) ,:method =>:delete, :class => "btn btn-danger")
 			- else
 				= link_to "Sign in to Add Words", "/auth/twitter", :class => "btn btn-success"
-
-/ .span6
-/ 	#randomwordzies
-/ 		%h1
-/ 			Random Wordzies
-/ 		%ul
-/ 			- @random_words.each do |word|
-/ 				%li
-/ 					= link_to word['word'], show_word_url(word['word'])
-/		%p.center= link_to 'I already know these wordzies!', root_url, :class => "btn"
-/		%p.center= link_to 'I don\'t like these wordzies, suggest new ones!', root_url, :class => "btn btn-danger"
+				

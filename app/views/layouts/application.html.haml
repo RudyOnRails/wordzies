@@ -9,9 +9,9 @@
 			.container
 				%h1= link_to 'Wordzies', :words
 				#signin
-					- if current_user
+					- if logged_in
 						%span
-							= "Welcome, #{current_user.name}"
+							= "#{logged_in.name}"
 							= link_to "Log Out", signout_path
 					- else
 						= link_to "Log In", "/auth/twitter"

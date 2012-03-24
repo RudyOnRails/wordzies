@@ -2,7 +2,7 @@ class WordsController < ApplicationController
   
   def index
     
-    if current_user
+    if logged_in
       @all_wordzies = @current_user.words.find(:all, :order => "created_at ASC")
     end
 
@@ -34,8 +34,7 @@ class WordsController < ApplicationController
   
   def create
 
-    if current_user
-      @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    if logged_in
       @word = Word.new(params[:word])
       @word.save
       @use = Use.new :word_id => @word.id, :user_id => @current_user.id
@@ -43,17 +42,15 @@ class WordsController < ApplicationController
       redirect_to root_url
     else
       # flash[:notice] = "Please sign in"
-      redirect_to "http://localhost:3000/auth/twitter"
+      redirect_to :twitter_auth
     end
   end
   
   def destroy
     
-     if current_user
+     if logged_in
 
-        #@use = Use.new :word_id => @word.id, :user_id => @current_user.id
-        #@use.save
-        @word=Use.find_by_word_id_and_user_id(params[:id],@current_user.id)
+        @word = Use.find_by_word_id_and_user_id(params[:id],@current_user.id)
         if @word.destroy
           flash[:notice]="Deleted word"
           redirect_to root_url
