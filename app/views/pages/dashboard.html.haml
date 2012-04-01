@@ -1,0 +1,11 @@
+.span4
+	#mywordzies
+		%h1 List: All
+		%ul
+			- if logged_in
+				- @all_wordzies.each do |wordzy|
+					%li
+						= link_to wordzy.wn_title, show_word_url(wordzy.wn_title)
+						= link_to("Delete", word_path(:id=> wordzy.id) ,:method =>:delete, :class => "btn btn-danger")
+			- else
+				= link_to "Sign in to Add Words", "/auth/twitter", :class => "btn btn-success"

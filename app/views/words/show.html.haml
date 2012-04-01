@@ -1,19 +1,16 @@
-.span6	
-	%p
-		%h1
-			= @the_word
-			= form_for(@word) do |f|
-				= f.hidden_field(:wn_title, value: @the_word)
-				= f.hidden_field(:wn_id, value: @wn_word_id)
-				- if logged_in
-					= f.submit("Add", :class => "btn-success btn-medium", :id => "search-btn")
-				- else
+.span6
+	%h1
+		= @the_word
+	= form_for(@word) do |f|
+		= f.hidden_field(:wn_title, value: @the_word)
+		= f.hidden_field(:wn_id, value: @wn_word_id)
+		- if logged_in
+			= f.submit("Add", :class => "btn-success btn-medium", :id => "search-btn")
 
 	%p
 		- if @wn_pronunciation.present?
 			Pronunciation:
 			= link_to 'Hear the word', @wn_pronunciation.first['fileUrl'], :target => :blank
-		- else
 
 	%p
 		- if @wn_definitions.present?
@@ -25,7 +22,6 @@
 						= definition["partOfSpeech"]
 						)
 						= definition["text"]
-		- else
 
 	%p
 		- if @wn_example.present?
@@ -36,7 +32,6 @@
 					"
 					= @wn_example['text']
 					"
-		- else
 
 	%p
 		- if @wn_synonyms.present?
@@ -46,7 +41,6 @@
 					- synonym_list['words'].each do |synonym|
 						%li
 							= link_to synonym, show_word_url(synonym)
-		- else
 
 /.span5
 /	- if Word.find_by_wn_id(@wn_word_id) != nil
