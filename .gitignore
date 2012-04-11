@@ -26,3 +26,6 @@ UXdocs/
 .rvmrc
 
 config/api_keys.yml
+
+# skip precompiled local assets
+/public/assets
