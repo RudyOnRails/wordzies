@@ -1,5 +1,10 @@
 Wordnik.configure do |config|
-  config.api_key = API_KEYS['WORDNIK_API_KEY']    # required
+  
+  if Rails.env = "production"
+    config.api_key = ENV['WORDZIES_WORDNIK_API_KEY']    # required
+  else
+    config.api_key = API_KEYS['WORDZIES_WORDNIK_API_KEY']    # required
+  end
   # config.username = 'bozo'                    # optional, but needed for user-related functions
   # config.password = 'cl0wnt0wn'               # optional, but needed for user-related functions
   config.response_format = 'json'             # defaults to json, but xml is also supported
