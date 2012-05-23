@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     if logged_in
       redirect_to :words
     else
-      render :layout => 'landings/annie1'
+      render :layout => 'landing'
     end
   end
 
