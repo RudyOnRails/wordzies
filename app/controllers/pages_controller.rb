@@ -1,10 +1,12 @@
 class PagesController < ApplicationController
 
+  @last_word = Word.all
+
   def landing
     if logged_in
       redirect_to :words
     else
-      render :layout => 'landing'
+      render :layout => 'falling_words'
     end
   end
 

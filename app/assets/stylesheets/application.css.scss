@@ -7,3 +7,14 @@
  *= require global
  *= require_tree . 
 */
+
+#marquee1 {
+	z-index:2;
+	position:absolute;
+	left:121;
+	top:31;
+	font-family:Cursive;
+	font-size:14pt;
+	color:ffcc00;
+	height:auto;
+	}

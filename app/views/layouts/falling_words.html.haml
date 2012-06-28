@@ -1,0 +1,19 @@
+%html
+	%head
+		%title Wordzies
+		= stylesheet_link_tag "application"
+		= javascript_include_tag "application"
+		= csrf_meta_tags
+		%link{ :rel => "shortcut icon", :href => "assets/wordzies-1.ico" }
+
+	%body
+		#signin
+		= link_to "Sign in", :twitter_auth
+		#marquee1
+			%marquee{:scrollamount => "10", :direction => "down" }
+				= @last_word
+
+/ 	%p#intro
+/ 		Welcome to Wordzies, the interactive vocabulary building application. 
+/ 		Wordzies is all about repitition, which is the best way to learn and remember new 
+/ 		words. We help you integrate your "wordzies" into your everyday use.

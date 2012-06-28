@@ -4,10 +4,11 @@
 		= stylesheet_link_tag "application"
 		= javascript_include_tag "application"
 		= csrf_meta_tags
+		%link{ :rel => "shortcut icon", :href => "assets/wordzies-1.ico" }
 	%body
 		%header#header
 			.container
-				%h1= link_to 'Wordzies', :dashboard
+				%h1= link_to 'Wordzies', :home
 				#signin
 					- if logged_in
 						%span
